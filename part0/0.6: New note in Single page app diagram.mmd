@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant browser
+    participant server
+    
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+    browser-->>server: new_note_spa JSON object
+    deactivate server
+    
+    Note right of the console: {"message":"note created"}
